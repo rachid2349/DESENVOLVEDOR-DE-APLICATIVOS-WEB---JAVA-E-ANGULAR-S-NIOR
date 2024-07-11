@@ -1,0 +1,16 @@
+<form [formGroup]="userForm" (ngSubmit)="onSubmit()">
+  <div class="p-field">
+    <label for="name">Nome</label>
+    <input id="name" type="text" pInputText formControlName="name">
+  </div>
+  <div class="p-field">
+    <label for="email">Email</label>
+    <input id="email" type="email" pInputText formControlName="email">
+  </div>
+  <div class="p-field">
+    <label for="password">Senha</label>
+    <input id="password" type="password" pInputText formControlName="password">
+  </div>
+  <button type="submit" pButton label="Cadastrar" [disabled]="userForm.invalid"></button>
+</form>
+<p-toast></p-toast>
